@@ -1,18 +1,19 @@
 [package]
-name = "kelixes-sandbox"
+name = "sandbox"
 version = "0.1.0"
 authors = ["Andrew J Westlake <kelixes@gmail.com>"]
 
 [dependencies]
 cortical = { git = "https://github.com/awestlake87/cortical" }
-ctrlc = "*"
-docopt = "*"
 error-chain = "*"
-sandbox = { path = "./sandbox" }
+futures = "*"
+gdk-pixbuf = "*"
+gtk = "*"
+nalgebra = "*"
+rand = "*"
+relm = "*"
+relm-derive = "*"
 sc2 = { git = "https://github.com/awestlake87/sc2-rs" }
 serde = "*"
 serde_derive = "*"
 tantrum = { git = "https://github.com/awestlake87/tantrum" }
-
-[workspace]
-members = ["./sandbox"]

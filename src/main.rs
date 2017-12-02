@@ -1,12 +1,7 @@
 
 extern crate ctrlc;
 extern crate docopt;
-extern crate futures;
-extern crate gdk_pixbuf;
-extern crate gtk;
-extern crate nalgebra as na;
-extern crate rand;
-extern crate relm;
+extern crate sandbox;
 extern crate sc2;
 extern crate tantrum;
 
@@ -15,13 +10,10 @@ extern crate cortical;
 #[macro_use]
 extern crate error_chain;
 #[macro_use]
-extern crate relm_derive;
-#[macro_use]
 extern crate serde_derive;
 
 mod args;
 mod errors;
-mod lobes;
 
 use std::sync::Arc;
 use std::sync::atomic::{ AtomicBool, Ordering };
@@ -36,7 +28,7 @@ use tantrum::{
     FrameForwarderLobe,
 };
 
-use lobes::{
+use sandbox::{
     create_keli_bot,
     KeliCortex,
     KeliConstraint,
@@ -59,7 +51,7 @@ quick_main!(|| -> Result<()> {
     ;
 
     if args.flag_version {
-        println!("tantrum version {}", VERSION);
+        println!("kelixes-sandbox version {}", VERSION);
         return Ok(())
     }
 
@@ -155,7 +147,7 @@ quick_main!(|| -> Result<()> {
         even_split_ledger_lobe,
         vec![ KeliConstraint::Budget ]
     )?;
-    
+
     keli_builder.connect(
         even_split_ledger_lobe,
         evolution_chamber_morpher_lobe,

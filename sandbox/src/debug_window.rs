@@ -24,7 +24,7 @@ use relm::{
 };
 use sc2;
 
-use super::super::errors::{ Result, Error, ErrorKind };
+use errors::{ Result, Error, ErrorKind };
 use super::{ KeliConstraint, KeliData };
 
 struct Model {

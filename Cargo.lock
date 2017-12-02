@@ -1,10 +1,8 @@
 [root]
-name = "kelixes-sandbox"
+name = "sandbox"
 version = "0.1.0"
 dependencies = [
  "cortical 0.1.0 (git+https://github.com/awestlake87/cortical)",
- "ctrlc 3.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "docopt 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.1.17 (registry+https://github.com/rust-lang/crates.io-index)",
  "gdk-pixbuf 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -487,6 +485,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "libc 0.2.34 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "kelixes-sandbox"
+version = "0.1.0"
+dependencies = [
+ "cortical 0.1.0 (git+https://github.com/awestlake87/cortical)",
+ "ctrlc 3.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "docopt 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "error-chain 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sandbox 0.1.0",
+ "sc2 0.1.0 (git+https://github.com/awestlake87/sc2-rs)",
+ "serde 1.0.23 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde_derive 1.0.23 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tantrum 0.1.0 (git+https://github.com/awestlake87/tantrum)",
 ]
 
 [[package]]

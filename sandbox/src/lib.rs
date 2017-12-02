@@ -1,6 +1,26 @@
+#![warn(missing_docs)]
+
+extern crate futures;
+extern crate gdk_pixbuf;
+extern crate gtk;
+extern crate nalgebra as na;
+extern crate rand;
+extern crate relm;
+extern crate sc2;
+extern crate tantrum;
+
+#[macro_use]
+extern crate cortical;
+#[macro_use]
+extern crate error_chain;
+#[macro_use]
+extern crate relm_derive;
+#[macro_use]
+extern crate serde_derive;
 
 mod budgeters;
 mod debug_window;
+mod errors;
 mod drone_morphers;
 mod nudge_base_locator;
 
@@ -30,18 +50,11 @@ use tantrum::{
     CommandMergerFeedbackOutput,
 };
 
-use errors::{ Result };
-
-pub use self::budgeters::{
-    Budget,
-    LobeBudget,
-    WholeBudgetLobe,
-    EvenSplitBudgetLobe,
-    EvenSplitLedgerLobe,
-};
-pub use self::debug_window::{ DebugWindowLobe };
-pub use self::drone_morphers::{ RandomDroneMorpherLobe };
-pub use self::nudge_base_locator::{ NudgeBaseLocatorLobe };
+pub use budgeters::*;
+pub use debug_window::*;
+pub use errors::*;
+pub use drone_morphers::*;
+pub use nudge_base_locator::*;
 
 create_cortex! {
     module: keli_cortex,
